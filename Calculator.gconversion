@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="164A19DE3590F9F3FC463CD24140C173" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Migration" Name="http://www.ni.com/LabVIEW.Migration" />
+		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
+		<ApplicationVersionInfo Build="4.9.1.56780" Name="LabVIEW Conversion" Version="4.9.1.56780" />
+	</SourceModelFeatureSet>
+	<MappingDefinition xmlns="http://www.ni.com/LabVIEW.Migration">
+		<FileQualifiedNameSource QualifiedName="Calculator\.vi">
+			<FileQualifiedNameTarget QualifiedName="Calculator\.gvi" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Overflow\ Protection\.vi">
+			<FileQualifiedNameTarget QualifiedName="Overflow\ Protection\.gvi" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Get\ \'M\'\ RefNum\.vi">
+			<FileQualifiedNameTarget QualifiedName="Get\ \'M\'\ RefNum\.gvi" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Button\ RefNum\ to\ Num\.vi">
+			<FileQualifiedNameTarget QualifiedName="Button\ RefNum\ to\ Num\.gvi" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Add\ To\ Display\.vi">
+			<FileQualifiedNameTarget QualifiedName="Add\ To\ Display\.gvi" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Backspace\.vi">
+			<FileQualifiedNameTarget QualifiedName="Backspace\.gvi" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Memory\ Functional\ Global\.vi">
+			<FileQualifiedNameTarget QualifiedName="Memory\ Functional\ Global\.gvi" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Operation\ Buttons\.ctl">
+			<FileQualifiedNameTarget QualifiedName="Operation\ Buttons\.gtype" />
+		</FileQualifiedNameSource>
+		<FileQualifiedNameSource QualifiedName="Memory\ Options\.ctl">
+			<FileQualifiedNameTarget QualifiedName="Memory\ Options\.gtype" />
+		</FileQualifiedNameSource>
+	</MappingDefinition>
+</SourceFile>
