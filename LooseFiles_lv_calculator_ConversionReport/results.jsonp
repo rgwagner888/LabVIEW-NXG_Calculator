@@ -1,0 +1,16 @@
+copy_data({
+"version":"3.0",
+
+"converted_project":"LooseFiles_lv_calculator.lvproject",
+
+"start_time":"08/31/2017 08:37:18",
+
+"arguments":"C:\\Program Files\\National Instruments\\LabVIEW NXG\\LabVIEW NXG.exe",
+
+"messages":[
+
+],
+"time_to_convert":"19 seconds ",
+
+"converted_VIs":"7"
+})

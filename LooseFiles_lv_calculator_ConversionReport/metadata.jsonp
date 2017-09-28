@@ -1,0 +1,21 @@
+copy_metadata({
+"Conversion_Report":"Conversion Report",
+
+"Converted_VIs":"Converted VIs",
+
+"Time_to_Convert":"Time to convert",
+
+"Converted_Project":"Converted project",
+
+"Search_Label":"Search all fields",
+
+"Group_By":"Group by",
+
+"GroupHeadings":["None","Severity","ID","File","Category",],
+"TabHeadings":["Severity","ID","Description","File","Original file","Category",],
+"Notes":"Notes",
+
+"Status":"Status",
+
+}
+)

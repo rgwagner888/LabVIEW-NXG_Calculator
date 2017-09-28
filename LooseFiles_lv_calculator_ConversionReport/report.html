@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/niscrollbar.css" />  
+    <script type="text/javascript" language="javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/angular-dropdowns.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/FileSaver.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/bootstrap.js"></script>   
+    <script type="text/javascript" language="javascript" src="./js/multiselect.js"></script> 
+    <script type="text/javascript" language="javascript">
+        function copy_data(jsonObj) {
+            window.data = jsonObj;
+        }
+        function copy_notes(jsonObj) {
+            window.notes = jsonObj;
+        }
+        function copy_metadata(jsonObj) {
+            window.metadata = jsonObj;
+        }
+
+        $(window).load(function () {
+            $(".loader").fadeOut("slow");
+        })
+    </script>
+    <script type="text/javascript" language="javascript" src="results.jsonp" charset="UTF-8"></script>
+    <script type="text/javascript" language="javascript" src="notes.jsonp" charset="UTF-8"></script>
+    <script type="text/javascript" language="javascript" src="metadata.jsonp" charset="UTF-8"></script>
+    <script type="text/javascript" language="javascript" src="./js/monarch.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/TableController.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/filters_and_directives.js"></script>
+    <script type='text/javascript' src="./js/ng-infinite-scroll.min.js"></script>
+    <script src="/resources/common/js/coherent.js"></script>
+    <script type="text/javascript" language="javascript">
+        function checkOffline(jsonObj) {
+            window.isOnline = true;
+        }
+    </script>
+</head>
+<body ng-app="monarchApp">
+    <div class="loader"></div>
+    <div ng-class="{containerOffline : !data.isInProduct, ContainerOnline : data.isInProduct}" ng-controller="TabController">
+        <h1 style="{{data.hideOnlyOnlineStyle}}"> {{data.project}} {{data.metadata.Conversion_Report}}</h1>
+        <p><a href="http://www.ni.com/documentation/en/labview/1.0/migration/migrating-source-code-from-labview/" target="_blank"> Additional Information on ni.com </a></p>
+        <section ng-class="{detailSection:true,hidden:!data.expanded}">
+            <div class="detailsBar">
+                <div ng-class="{detailsData:true}">
+                    <div class="info-left">
+                        <b>{{data.metadata.Converted_VIs}} :</b> {{data.VIs}} <br>
+                    </div>
+                    <div class="info-right">
+                        <b>{{data.metadata.Time_to_Convert}}:</b> {{data.time}} <br>
+                        <b>{{data.metadata.Converted_Project}}:</b> {{data.project}}
+                    </div>
+                </div>
+                <div class="info-bar">
+                    <div ng-repeat="bar in severity.bars track by $index" ng-style="{'width' : bar + '%'}"
+                         title="{{severity.legends[$index]}}: {{severity.count[$index]}}"
+                         ng-class="{Warning:severity.legends[$index]=='ReviewRequired',Abort:severity.legends[$index]=='Abort',Error:severity.legends[$index]=='ManualFix',Info:severity.legends[$index]=='Info'}">
+                    </div>
+                </div>
+
+
+                <div class="info-legend">
+
+                    <span ng-repeat="legend in severity.legends" title="{{severity.count[$index]}}">
+                        <i ng-class="{Warning:severity.legends[$index]=='ReviewRequired',Abort:severity.legends[$index]=='Abort',Error:severity.legends[$index]=='ManualFix',Info:severity.legends[$index]=='Info'}"></i>{{legend}}
+                    </span>
+                </div>
+
+            </div>
+            <div class='detailsToggleBar' style={{data.hideOnlyOnlineStyle}}>
+                <div ng-click="data.expanded=!data.expanded; hoverImage=false"
+                     ng-mousedown="activeImage=true"
+                     ng-mouseup="activeImage=false"
+                     ng-mouseenter="hoverImage=true"
+                     ng-mouseleave="hoverImage=false"
+                     ng-class="{sprite:true,collapsed:data.expanded,expanded:!data.expanded, active:activeImage, hover:hoverImage}"
+                     height=20px>
+                </div>
+            </div>
+        </section>
+        <div class="tableContainer">
+            <section class="tableSection">
+                <div ng-class="{tableData:true,left:data.activeTab>1,right:data.activeTab<1,animated:data.activeTab==1}" ng-controller="TableController">
+                    <div style={{data.displayInlineBlockOffline}} dropdown-select="ddSelectOptions"
+                         dropdown-model="ddSelectSelected"
+                         dropdown-item-label="text"
+                         dropdown-onchange="doAction(selected)">
+
+                    </div>
+                    <div class="searchSection">
+                        <div class="navBar">
+                            <span class="groupBy"> {{data.metadata.Group_By}} : </span>
+                            <nav class="groupSection">
+                                <ul>
+                                    <li ng-repeat="heading in data.groupingTabs"
+                                        ng-click="setTab($event, $index+1)"
+                                        ng-class="{selected:data.activeTab==$index+1,hidden:!data.expanded, {{heading.class}}:true}">
+                                        <i ng-class="{none:heading.class=='None'}"></i><span>{{heading.name}}</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <input class="searchBar" style="margin:0px;" placeholder={{data.metadata.Search_Label}} ng-model="search"></input>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs row-fluid">
+                        <li ng-style="{'width' : columnWidth[0] +'%'}">
+                            <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[0]}}
+                                         ng-model="data.selectedSeverityList" ms-header="Severity"
+                                         ms-sort="severity"
+                                         ms-index="0"
+                                         ng-click="updateFilteredData('severity')" options="c.name for c in data.ddSeverityList"></multiselect>
+                        </li>
+                        <li col-resize index=0 class="BorderColumn" />
+
+                        <li ng-style="{'width' : columnWidth[1] +'%'}">
+                            <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[1]}}
+                                         ng-model="data.selectedIdList" ms-header="Id"
+                                         ms-sort="messageId"
+                                         ms-index="1"
+                                         ng-click="updateFilteredData('messageId')" options="c.name for c in data.ddIdList"></multiselect>
+                        </li>
+                        <li col-resize index=1 class="BorderColumn" />
+                        <li ng-style="{'width' : columnWidth[2] +'%'}">
+                            <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[2]}}
+                                         ng-model="data.selectedObjectsList" ms-header="Objects"
+                                         ms-sort="object"
+                                         ms-index="2"
+                                         ng-click="updateFilteredData('objectsList')" options="c.name for c in data.ddObjectsList"></multiselect>
+                        </li>
+                        <li col-resize index=2 class="BorderColumn" />
+                        <li ng-style="{'width' : columnWidth[3] +'%'}">
+                            <button type="button" class="btn btn-default" style="width:100%">{{data.metadata.TabHeadings[3]}}</button>
+                        </li>
+                        <li col-resize index=3 class="BorderColumn" />
+                        <li ng-style="{'width' : columnWidth[4] +'%'}">
+                            <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[4]}}
+                                         ng-model="data.selectedFileList" ms-header="Original File"
+                                         ms-sort="files"
+                                         ms-index="4"
+                                         ng-click="updateFilteredData('files')" options="c.name for c in data.ddFilesList"></multiselect>
+                        </li>
+                        <li col-resize index=4 class="BorderColumn" />
+
+                        <li ng-style="{'width' : columnWidth[5] +'%'}">
+                            <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[5]}}
+                                         ng-model="data.selectedCategoryList" ms-header="Category"
+                                         ms-sort="category"
+                                         ms-index="5"
+                                         ng-click="updateFilteredData('categoryList')" options="c.name for c in data.ddCategoryList"></multiselect>
+                        </li>
+                        <li ng-show="data.isInProduct || data.notesModified" col-resize index=5 class="BorderColumn" />
+                        <li ng-show="data.isInProduct || data.notesModified" ng-style="{'width' : columnWidth[6] +'%'}">
+                            <button style="width:100%" type="button" class="btn btn-default">{{data.metadata.Notes}}</button>
+                        </li>
+                        <li ng-show="data.isInProduct || data.statusModified" col-resize index=6 class="BorderColumn" />
+                        <li ng-show="data.isInProduct || data.statusModified" ng-style="{'width' : columnWidth[7] +'%'}">
+                            <button style="width:100%" type="button" class="btn btn-default">{{data.metadata.Status}}</button>
+                        </li>
+                    </ul>
+
+
+                    <div ng-class="{tableWrapper:true,expanded:data.expanded}">
+                        <div class="tableBody">
+                            <div infinite-scroll='loadMoreMessages()' infinite-scroll-distance='2'>
+                                <ul ng-repeat="message in filteredMessages|filter:search |  orderBy:predicate:reverse | limitTo : data.limit track by message.index">
+                                    <li ng-style="{'width' : columnWidth[0] +'%'}"
+                                        ng-class="{SeverityItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                        ng-click="highlightItem(message.newPath, message.newObjectId)">
+                                        {{message.severity}}
+                                    </li>
+                                    <li style="background:white" class="BorderColumnInTable">
+                                    </li>
+                                    <li ng-style="{'width' : columnWidth[1] +'%'}"
+                                        ng-class="{IdItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                        ng-click="highlightItem(message.newPath, message.newObjectId)">
+                                        {{message.messageId}}
+                                    </li>
+                                    <li style="background:white" class="BorderColumnInTable" />
+                                    <li ng-style="{'width' : columnWidth[2] +'%'}"
+                                        ng-class="{ObjectItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                        ng-click="highlightItem(message.newPath, message.newObjectId)"
+                                        title="{{message.object}}">
+                                        {{message.object}}
+                                    </li>
+                                    <li style="background:white" class="BorderColumnInTable" />
+                                    <li ng-style="{'width' : columnWidth[3] +'%'}"
+                                        ng-class="{FileItem:true, showPointer: data.isInProduct}"
+                                        ng-click="highlightItem(message.newPath, message.newObjectId)"
+                                        title="{{message.newPath}}">
+                                        {{message.newPath.split('\\').pop()}}
+                                    </li>
+                                    <li style="background:white" class="BorderColumnInTable" />
+                                    <li ng-style="{'width' : columnWidth[4] +'%'}"
+                                        ng-class="{FileItem:true, showPointer: data.isInProduct}"
+                                        ng-click="highlightItem(message.newPath, message.newObjectId)"
+                                        title="{{message.files}}">
+                                        {{message.files.split('\\').pop()}}
+                                    </li>
+                                    <li style="background:white" class="BorderColumnInTable" />
+                                    <li ng-style="{'width' : columnWidth[5] +'%'}"
+                                        ng-class="{CategoryItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                        ng-click="highlightItem(message.newPath, message.newObjectId)">
+                                        {{message.category}}
+                                    </li>
+                                    <li ng-show="data.isInProduct || data.notesModified" style="background:white" class="BorderColumnInTable" />
+                                    <li ng-show="data.isInProduct || data.notesModified" ng-style="{'width' : columnWidth[6] +'%'}; ">
+                                        <div>
+                                            <div id="NotesIconDiv{{message.uniqueID + 'none'}}" ng-show="data.showIcon[0] && (message.notes || data.isInProduct)" ng-click="showNotes($event, message.uniqueID, 'none')"
+                                                 ng-class="{NotesIcon:true, showPointer: (data.isInProduct || message.notes), empty: !message.notes, filled : message.notes}"
+                                                 title="{{message.notes ? message.notes : data.defaultNotesValue}}">
+                                            </div>
+                                            <div id="NotesTextDiv{{message.uniqueID + 'none'}}" ng-show="data.showText[0]" class="NotesTextDiv">
+                                                <i style="float : left;" ng-click="showIcons($event, message.uniqueID)" class="NotesCollapse"></i>
+                                                <div style="float : left; padding : 0px 10px" ng-click="showEditTextArea($event, message.uniqueID, 'none')"
+                                                     id="NotesTextValueDiv{{message.uniqueID + 'none'}}">
+                                                    {{message.notes ? message.notes : data.defaultNotesValue}}
+                                                </div>
+                                            </div>
+                                            <textarea cols="40" rows="3" id="NotesEditTextArea{{message.uniqueID+'none'}}" class="NotesEditTextArea" ng-blur="change(message.uniqueID,'none')"></textarea>
+                                        </div>
+                                    </li>
+                                    <li ng-show="data.isInProduct || data.statusModified" style="background:white" class="BorderColumnInTable" />
+                                    <li ng-show="data.isInProduct || data.statusModified" ng-style="{'width' : columnWidth[7] +'%'}; ">
+                                        <div ng-class="{status:true, showPointer: data.isInProduct, open : message.status == 0,  flagged : message.status == 1, complete : message.status == 2}"
+                                             ng-click="changeStatusImage(message.uniqueID)">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table-data active-tab="{{data.activeTab}}" ng-repeat="grouping in ['severity','id','files','category']" grouping="{{grouping}}" index="{{$index+2}}"></table-data>
+            </section>
+        </div>
+    </div>
+    <script type="text/ng-template" id="tables.html">
+        <div ng-class="{tableData:true,left:data.activeTab>index,right:data.activeTab<index,animated:data.activeTab==index}" ng-controller="TableController">
+            <div style={{data.displayInlineBlockOffline}} dropdown-select="ddSelectOptions"
+                 dropdown-model="ddSelectSelected"
+                 dropdown-item-label="text"
+                 dropdown-onchange="doAction(selected)">
+            </div>
+            <div class="searchSection">
+                <div class="navBar">
+                    <span class="groupBy"> {{data.metadata.Group_By}} : </span>
+                    <nav class="groupSection">
+                        <ul>
+
+                            <li ng-repeat="heading in data.groupingTabs"
+                                ng-click="setTab($event, $index+1)"
+                                ng-class="{selected:data.activeTab==$index+1,hidden:!data.expanded, {{heading.class}}:true}">
+                                <i ng-class="{none:heading.class=='None'}"></i><span>{{heading.name}}</span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <input class="searchBar" style="margin : 0px" placeholder="Search {{grouping|orderArray}}" ng-model="search"></input>
+                </div>
+            </div>
+            <ul class="nav nav-tabs row-fluid">
+                <li ng-style="{'width' : columnWidth[0] +'%'}">
+                    <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[0]}}
+                                 ng-model="data.selectedSeverityList" ms-header="Severity"
+                                 ms-sort="severity"
+                                 ms-index="0"
+                                 ng-click="updateFilteredData('severity')" options="c.name for c in data.ddSeverityList"></multiselect>
+                </li>
+                <li col-resize index=0 class="BorderColumn" />
+                <li ng-style="{'width' : columnWidth[1] +'%'}">
+                    <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[1]}}
+                                 ng-model="data.selectedIdList" ms-header="Id"
+                                 ms-sort="id"
+                                 ms-index="1"
+                                 ng-click="updateFilteredData('messageId')" options="c.name for c in data.ddIdList"></multiselect>
+                </li>
+                <li col-resize index=1 class="BorderColumn" />
+                <li ng-style="{'width' : columnWidth[2] +'%'}">
+                    <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[2]}}
+                                 ng-model="data.selectedObjectsList" ms-header="Objects"
+                                 ms-sort="object"
+                                 ms-index="2"
+                                 ng-click="updateFilteredData('objectsList')" options="c.name for c in data.ddObjectsList"></multiselect>
+                </li>
+                <li col-resize index=2 class="BorderColumn" />
+                <li ng-style="{'width' : columnWidth[3] +'%'}">
+                    <button type="button" class="btn btn-default" style="width:100%">{{data.metadata.TabHeadings[3]}}</button>
+                </li>
+                <li col-resize index=3 class="BorderColumn" />
+                <li ng-style="{'width' : columnWidth[4] +'%'}">
+                    <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[4]}}
+                                 ng-model="data.selectedFileList" ms-header="Files"
+                                 ms-sort="files"
+                                 ms-index="4"
+                                 ng-click="updateFilteredData('files')" options="c.name for c in data.ddFilesList"></multiselect>
+                </li>
+                <li col-resize index=4 class="BorderColumn" />
+
+                <li ng-style="{'width' : columnWidth[5] +'%'}">
+                    <multiselect class="input-lg ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" multiple="true" ms-selected={{data.metadata.TabHeadings[5]}}
+                                 ng-model="data.selectedCategoryList" ms-header="Category"
+                                 ms-sort="category"
+                                 ms-index="5"
+                                 ng-click="updateFilteredData('categoryList')" options="c.name for c in data.ddCategoryList"></multiselect>
+                </li>
+                <li ng-show="data.isInProduct || data.notesModified" col-resize index=5 class="BorderColumn" />
+                <li ng-show="data.isInProduct || data.notesModified" ng-style="{'width' : columnWidth[6] +'%'}">
+                    <button style="width:100%" type="button" class="btn btn-default">Notes</button>
+                </li>
+                <li ng-show="data.isInProduct || data.statusModified" col-resize index=6 class="BorderColumn" />
+                <li ng-show="data.isInProduct || data.statusModified" ng-style="{'width' : columnWidth[7] +'%'}">
+                    <button style="width:100%" type="button" class="btn btn-default">Status</button>
+                </li>
+            </ul>
+
+            <div ng-class="{tableWrapper:true,expanded:data.expanded}">
+                <div class="tableBody">
+                    <ul ng-repeat="subGroup in data[grouping]['groupNames']|filter:search | updateLimitInfo: $index : search">
+                        <li id="expandable" ng-click="OnGroupingExpandedOrCollapsed(grouping, subGroup, $event)" ng-class="{group:true,expanded:data[grouping]['expanded'][subGroup]}" style="width:100%">
+                            <span> {{subGroup}} ({{::(filteredMessages|groupFilter:grouping:subGroup).length}})</span>
+                            <ul ng-class="{expanded:data[grouping]['expanded'][subGroup]}" ng-repeat="message in filteredMessages|groupFilter:grouping:subGroup | limitTo : data.limits[grouping][subGroup] | orderBy:predicate:reverse track by message.index">
+                                <li ng-style="{'width' : columnWidth[0] +'%'}"
+                                    ng-class="{SeverityItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                    ng-click="highlightItem(message.newPath, message.newObjectId)">
+                                    {{message.severity}}
+                                </li>
+                                <li style="background:white" class="BorderColumnInTable" />
+                                <li ng-style="{'width' : columnWidth[1] +'%'}"
+                                    ng-class="{IdItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                    ng-click="highlightItem(message.newPath, message.newObjectId)">
+                                    {{message.messageId}}
+                                </li>
+                                <li style="background:white" class="BorderColumnInTable" />
+                                <li ng-style="{'width' : columnWidth[2] +'%'}"
+                                    ng-class="{ObjectItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                    ng-click="highlightItem(message.newPath, message.newObjectId)"
+                                    title="{{message.object}}">
+                                    {{message.object}}
+                                </li>
+                                <li style="background:white" class="BorderColumnInTable" />
+                                <li ng-style="{'width' : columnWidth[3] +'%'}"
+                                    ng-class="{NewPathItem:true, showPointer: data.isInProduct}"
+                                    ng-click="highlightItem(message.newPath, message.newObjectId)"
+                                    title="{{message.newPath}}">
+                                    {{message.newPath.split('\\').pop()}}
+                                </li>
+                                <li style="background:white" class="BorderColumnInTable" />
+                                <li ng-style="{'width' : columnWidth[4] +'%'}"
+                                    ng-class="{FileItem:true, showPointer: data.isInProduct}"
+                                    ng-click="highlightItem(message.newPath, message.newObjectId)"
+                                    title="{{message.files}}">
+                                    {{message.files.split('\\').pop()}}
+                                </li>
+                                <li style="background:white" class="BorderColumnInTable" />
+                                <li ng-style="{'width' : columnWidth[5] +'%'}"
+                                    ng-class="{CategoryItem:true, selectable : true, showPointer: data.isInProduct && message.newObjectId}"
+                                    ng-click="highlightItem(message.newPath, message.newObjectId)">
+                                    {{message.category}}
+                                </li>
+
+                                <li ng-show="data.isInProduct || data.notesModified" style="background:white" class="BorderColumnInTable" />
+                                <li ng-show="data.isInProduct || data.notesModified" ng-style="{'width' : columnWidth[6] +'%'}; ">
+                                    <div>
+                                        <div id="NotesIconDiv{{message.uniqueID + grouping}}" ng-show="data.showIcon[0]" ng-click="showNotes($event, message.uniqueID, grouping)"
+                                             ng-class="{NotesIcon:true, showPointer: (data.isInProduct || message.notes) , empty: !message.notes , filled : message.notes}"
+                                             title="{{message.notes ? message.notes : data.defaultNotesValue}}">
+                                        </div>
+                                        <div id="NotesTextDiv{{message.uniqueID + grouping}}" ng-show="data.showText[0]" class="NotesTextDiv">
+                                            <i style="float : left;" ng-click="showIcons($event, message.uniqueID)" class="NotesCollapse"></i>
+                                            <div style="float : left; padding : 0px 10px" ng-click="showEditTextArea($event, message.uniqueID, grouping)"
+                                                 id="NotesTextValueDiv{{message.uniqueID+grouping}}">
+                                                {{message.notes ? message.notes : data.defaultNotesValue}}
+                                            </div>
+                                        </div>
+                                        <textarea cols="40" rows="3" id="NotesEditTextArea{{message.uniqueID + grouping}}" class="NotesEditTextArea" ng-blur="change(message.uniqueID + grouping)"></textarea>
+                                    </div>
+                                </li>
+                                <li ng-show="data.isInProduct || data.statusModified" style="background:white" class="BorderColumnInTable" />
+                                <li ng-show="data.isInProduct || data.statusModified" ng-style="{'width' : columnWidth[7] +'%'}; ">
+                                    <div ng-class="{status:true, showPointer: data.isInProduct, open : message.status == 0,  flagged : message.status == 1, complete : message.status == 2}"
+                                         ng-click="changeStatusImage(message.uniqueID)">
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+</body>
+</html>

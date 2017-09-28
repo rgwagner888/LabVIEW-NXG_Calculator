@@ -1,0 +1,743 @@
+/* line 34, ../../sass/monarch.sass */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 38, ../../sass/monarch.sass */
+body, .detailsBar {
+  min-width: 850px;
+}
+
+/* line 42, ../../sass/monarch.sass */
+section, .detailsBar, .detailsData, .info-bar {
+  zoom: 1;
+}
+/* line 44, ../../sass/monarch.sass */
+section:before, .detailsBar:before, .detailsData:before, .info-bar:before, section:after, .detailsBar:after, .detailsData:after, .info-bar:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 49, ../../sass/monarch.sass */
+section:after, .detailsBar:after, .detailsData:after, .info-bar:after {
+  clear: both;
+}
+
+/* Generic styles applying throughout */
+/* line 61, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 57, ../../sass/monarch.sass */
+body {
+  color: #555b61;
+  font-family: Segoe UI;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  overflow-x: hidden;
+  margin: 0px;
+  cursor :default;
+}
+
+/* line 65, ../../sass/monarch.sass */
+.containerOnline {
+  width: 100%;
+  min-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containerOffline {
+  width: 1000px;
+  min-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 71, ../../sass/monarch.sass */
+section {
+  width: 100%;
+}
+
+/* line 75, ../../sass/monarch.sass */
+.navBar {
+  border-bottom: 1px solid #737373;
+  height: 38px;
+  margin-top: 10px;
+}
+
+/* line 79, ../../sass/monarch.sass */
+.groupBy {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  margin-right: 3px;
+  height: 26px;
+  line-height: 26px;
+}
+
+/* line 87, ../../sass/monarch.sass */
+.groupSection {
+  display: inline-block;
+}
+/* line 90, ../../sass/monarch.sass */
+.groupSection ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+  position: relative;
+}
+/* line 98, ../../sass/monarch.sass */
+.groupSection ul li {
+  float: left;
+  height: 26px;
+  cursor: pointer;
+  display: inline;
+  border: 1px solid white;
+}
+/* line 103, ../../sass/monarch.sass */
+.groupSection ul li:hover {
+  background-color: white;
+  border: 1px solid #4386b9;
+}
+/* line 106, ../../sass/monarch.sass */
+.groupSection ul li.selected {
+  background-color: #dce5ec;
+  border: 1px solid #4386b9;
+}
+/* line 111, ../../sass/monarch.sass */
+.groupSection ul li.selected:hover {
+  background-color: white;
+  border: 1px solid #4386b9;
+}
+/* line 114, ../../sass/monarch.sass */
+.groupSection ul li.selected.hidden {
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+/* line 119, ../../sass/monarch.sass */
+.groupSection ul li:active {
+  background-color: #4386b9;
+}
+/* line 121, ../../sass/monarch.sass */
+.groupSection ul li span {
+  display: inline-block;
+  font-size: 13px;
+  margin-right: 10px;
+  line-height: 26px;
+  vertical-align: top;
+}
+/* line 127, ../../sass/monarch.sass */
+.groupSection ul li i {
+  display: inline-block;
+  line-height: 26px;
+  height: 26px;
+  margin-right: 3px;
+  background-position-y: 50%;
+  margin-left: 10px;
+  width: 16px;
+}
+/* line 136, ../../sass/monarch.sass */
+.groupSection ul li i.none {
+  width: 0px;
+  margin-right: 0px;
+}
+
+/* line 141, ../../sass/monarch.sass */
+.detailsBar {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+/* line 150, ../../sass/monarch.sass */
+.hidden .detailsBar {
+  height: 0px;
+}
+
+/* line 153, ../../sass/monarch.sass */
+.detailsData {
+  font-size: 0.75em;
+  width: 100%;
+  left: 0;
+}
+/* line 158, ../../sass/monarch.sass */
+.detailsData.animated {
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+/* line 162, ../../sass/monarch.sass */
+.detailsData.left {
+  left: -100%;
+}
+/* line 164, ../../sass/monarch.sass */
+.detailsData.right {
+  left: 100%;
+}
+/* line 167, ../../sass/monarch.sass */
+.detailsData .info-left {
+  float: left;
+  text-align: left;
+  padding: 20px 0px;
+}
+/* line 171, ../../sass/monarch.sass */
+.detailsData .info-right {
+  float: right;
+  text-align: left;
+  padding: 20px 20px;
+}
+
+/* line 176, ../../sass/monarch.sass */
+.info-bar {
+  margin: 15px 0px;
+}
+/* line 179, ../../sass/monarch.sass */
+.info-bar div {
+  height: 20px;
+  float: left;
+  cursor: pointer;
+}
+/* line 183, ../../sass/monarch.sass */
+.info-bar .Warning {
+  background-color: #FF8900;
+}
+/* line 185, ../../sass/monarch.sass */
+.info-bar .Abort {
+  background-color: #2B3033;
+}
+/* line 187, ../../sass/monarch.sass */
+.info-bar .Error {
+  background-color: #B51F2F;
+}
+.info-bar .FullStop {
+    background-color: #8367A5;
+}
+.info-bar .Info {
+    background-color: #319FBC;
+}
+.info-bar .Message {
+    background-color: #516B46;
+}
+
+/* line 193, ../../sass/monarch.sass */
+.info-legend {
+  /* float: right */
+  margin: 0 25px 25px 15px;
+  float: right;
+}
+/* line 197, ../../sass/monarch.sass */
+.info-legend span {
+  margin-left: 10px;
+  display: inline-block;
+}
+/* line 200, ../../sass/monarch.sass */
+.info-legend span i {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 207, ../../sass/monarch.sass */
+.info-legend span i.Warning {
+  background-color: #FF8900;
+}
+/* line 209, ../../sass/monarch.sass */
+.info-legend span i.Abort {
+  background-color: #2B3033;
+}
+/* line 211, ../../sass/monarch.sass */
+.info-legend span i.Error {
+  background-color: #B51F2F;
+}
+.info-legend span i.FullStop {
+  background-color: #8367A5;
+}
+.info-legend span i.Info {
+  background-color: #319FBC;
+}
+.info-legend span i.Message {
+  background-color: #516B46;
+}
+
+/* line 214, ../../sass/monarch.sass */
+.image {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* line 219, ../../sass/monarch.sass */
+.detailsToggleBar {
+  border-top: 1px solid #737373;
+  height: 20px;
+  background-color: white;
+  position: relative;
+  /* &::before
+   * +triangle(top, white, floor($height*0.5))
+   * position: absolute
+   * left: 50%
+   * top: floor($height*0.25)*-1
+   * content: " "
+   * margin-left: floor($height*0.5)*-1
+   * .hidden &
+   *  +triangle(bottom, white, floor($height*0.5))
+   *  top: floor($height*0.25) */
+}
+
+/* line 236, ../../sass/monarch.sass */
+.tableSection {
+  position: relative;
+}
+
+/* line 239, ../../sass/monarch.sass */
+.tableData {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+/* line 244, ../../sass/monarch.sass */
+.tableData.animated {
+  display: block;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+/* line 249, ../../sass/monarch.sass */
+.tableData.left {
+  left: -120%;
+  display: none;
+}
+/* line 253, ../../sass/monarch.sass */
+.tableData.right {
+  left: 120%;
+  display: none;
+}
+/* line 257, ../../sass/monarch.sass */
+.tableData .heading {
+  float: left;
+  padding: 15px 0px;
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 262, ../../sass/monarch.sass */
+.tableData .searchBar {
+  float: right;
+  margin: 15px 25px 15px 0px;
+  border: 1px solid #737373;
+  padding: 5px;
+  min-width: 250px;
+}
+/* line 23, ../../sass/monarch.sass */
+.tableData .searchBar::-webkit-input-placeholder {
+  font-style: italic;
+}
+/* line 25, ../../sass/monarch.sass */
+.tableData .searchBar::-moz-placeholder {
+  font-style: italic;
+}
+/* line 27, ../../sass/monarch.sass */
+.tableData .searchBar::-moz-placeholder {
+  font-style: italic;
+}
+/* line 29, ../../sass/monarch.sass */
+.tableData .searchBar:-ms-input-placeholder {
+  font-style: italic;
+}
+/* line 270, ../../sass/monarch.sass */
+.tableData .searchBar:focus {
+  border: 2px solid #737373;
+  outline: none;
+}
+
+/* line 274, ../../sass/monarch.sass */
+.tableWrapper {
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+}
+/* line 282, ../../sass/monarch.sass */
+.tableWrapper ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  list-style: none;
+  position: relative;
+}
+/* line 289, ../../sass/monarch.sass */
+.tableWrapper ul li {
+  float: left;
+  padding: 1px 0px 0px 2px;
+  vertical-align: middle;
+  font-size: 0.75em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 0px;
+  border-right: 1px solid white;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: intial;
+}
+/* line 299, ../../sass/monarch.sass */
+.tableWrapper ul:nth-of-type(2n) > li {
+  background-color: #ebf0f5;
+}
+/* line 301, ../../sass/monarch.sass */
+.tableWrapper ul:nth-of-type(2n+1) > li {
+  background-color: #f4f9fc;
+}
+/* line 303, ../../sass/monarch.sass */
+.tableWrapper ul li.group {
+  
+  font-size: 1em;
+  background-color: white;
+  padding: 0 0;
+  position: relative;
+  display: inline; /* A flex display would screw the layout of the group views */
+}
+/* line 309, ../../sass/monarch.sass */
+.tableWrapper ul li.group:before {
+  content: "\25b6";
+  font-size: 1em;
+  cursor: pointer;
+}
+/* line 319, ../../sass/monarch.sass */
+.tableWrapper ul li.group.expanded:before {
+  content: "\25bc";
+  font-size: 0.8em;
+  cursor: pointer;
+}
+/* line 321, ../../sass/monarch.sass */
+.tableWrapper ul li.group span {
+  font-weight: bold;
+  font-size:0.8em;
+}
+/* line 323, ../../sass/monarch.sass */
+.tableWrapper ul ul:nth-of-type(2n) > li {
+  background-color: #ebf0f5;
+}
+/* line 325, ../../sass/monarch.sass */
+.tableWrapper ul ul:nth-of-type(2n+1) > li {
+  background-color: #f4f9fc;
+}
+/* line 327, ../../sass/monarch.sass */
+.tableWrapper ul ul {
+  display: none;
+}
+/* line 329, ../../sass/monarch.sass */
+.tableWrapper ul ul.expanded {
+  display: flex;
+  display: -webkit-flex; /* Safari */
+}
+/* line 334, ../../sass/monarch.sass */
+.tableWrapper .tableHeader li {
+  border-right: 1px solid #ebf0f5;
+  cursor: pointer;
+  position: relative;
+    
+}
+/* line 339, ../../sass/monarch.sass */
+.tableWrapper .tableHeader li.Heading {
+  border: 1px solid white;
+  background-color: #f2f4f6;
+}
+/* line 341, ../../sass/monarch.sass */
+.tableWrapper .tableHeader li.Heading:hover {
+  border: 1px solid #4386b9;
+  background-color: white;
+    z-index: 5;
+}
+/* line 345, ../../sass/monarch.sass */
+.tableWrapper .tableHeader li.sortable.ascending:after {
+  content: "\25b2";
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 8px;
+}
+/* line 354, ../../sass/monarch.sass */
+.tableWrapper .tableHeader li.sortable.descending:after {
+  content: "\25bc";
+  display: table-row;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 8px;
+}
+/* line 363, ../../sass/monarch.sass */
+.tableWrapper .tableHeader li.TableColumnBorder {
+  width: 4px;
+  padding: 0px;
+  cursor: ew-resize;
+  background-color: #4d5359;
+  z-index: 3;
+}
+
+/* line 372, ../../sass/monarch.sass */
+.tableBodyWrapper {
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* line 378, ../../sass/monarch.sass */
+.sprite {
+  background: url("../images/summarycollapsed.png") no-repeat top left;
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+  left: 50%;
+  top: -4px;
+  cursor: pointer;
+}
+/* line 388, ../../sass/monarch.sass */
+.sprite.collapsed.hover {
+  background-position: 0px -25px;
+  width: 41px;
+  height: 15px;
+}
+/* line 392, ../../sass/monarch.sass */
+.sprite.collapsed.active {
+  background-position: 0px 0px;
+  width: 40px;
+  height: 15px;
+}
+/* line 396, ../../sass/monarch.sass */
+.sprite.collapsed {
+  background-position: 0px -50px;
+  width: 40px;
+  height: 15px;
+}
+/* line 400, ../../sass/monarch.sass */
+.sprite.expanded.hover {
+  background-position: 0px -100px;
+  width: 41px;
+  height: 15px;
+}
+/* line 404, ../../sass/monarch.sass */
+.sprite.expanded.active {
+  background-position: 0px -75px;
+  width: 41px;
+  height: 15px;
+}
+/* line 408, ../../sass/monarch.sass */
+.sprite.expanded {
+  background-position: 0px -125px;
+  width: 41px;
+  height: 15px;
+}
+
+/* ['Files', 'object','Severity','Category']
+ * Taken from offline.html */
+/* line 417, ../../sass/monarch.sass */
+.files i {
+  background-image: url("../images/PNGs/MonarchReportAssets_File_Normal.png");
+  background-repeat: no-repeat;
+}
+
+/* line 421, ../../sass/monarch.sass */
+.id i {
+  background-image: url("../images/PNGs/MonarchReportAssets_Object_Normal.png");
+  background-repeat: no-repeat;
+}
+
+/* line 425, ../../sass/monarch.sass */
+.severity i {
+  background-image: url("../images/PNGs/MonarchReportAssets_Severity_Normal.png");
+  background-repeat: no-repeat;
+}
+
+/* line 429, ../../sass/monarch.sass */
+.category i {
+  background-image: url("../images/PNGs/MonarchReportAssets_Category_Normal.png");
+  background-repeat: no-repeat;
+}
+
+/* For table under details section */
+/* line 436, ../../sass/monarch.sass */
+.CategoryItem {
+  width: 200px;
+}
+
+/* line 439, ../../sass/monarch.sass */
+.FileItem {
+  width: 166px;
+}
+
+/* line 442, ../../sass/monarch.sass */
+.ObjectItem {
+  width: 447px;
+}
+
+/* line 445, ../../sass/monarch.sass */
+.SeverityItem {
+  width: 75px;
+}
+
+.showPointer
+{
+  cursor: pointer;
+  cursor: hand;
+}
+
+.NotesItem {
+  width: 115px;
+}
+
+.NotesIcon 
+{ 
+  background: url("../images/Notes.png") no-repeat top left; 
+  width: 20px; height: 20px;
+} 
+
+.NotesIcon.empty { background-position: 0 0; }
+ 
+.NotesIcon.filled { background-position: 0 -22px; }
+
+.NotesEditTextArea
+{
+  display:none;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.NotesTextDiv
+{
+  float : left
+}
+
+.NotesCollapse
+{
+  cursor: pointer;
+  background: url("../images/PNGs/collapse.png") no-repeat top left;
+  background-size: 100% 100%;
+  width: 15px; 
+  height: 15px;
+}
+
+/* line 378, ../../sass/monarch.sass */
+.status {
+  background: url("../images/status.png") no-repeat top left;
+  width: 16px; 
+  height: 16px;
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+}
+/* line 388, ../../sass/monarch.sass */
+.status.open {
+  background-position: -52px 0;
+}
+/* line 392, ../../sass/monarch.sass */
+.status.flagged {
+  background-position: -26px 0;
+}
+/* line 396, ../../sass/monarch.sass */
+.status.complete {
+  background-position: 0 0;
+}
+
+.selectable{
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+}
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("../images/loading.gif") no-repeat 50% 0%;
+}
+
+.BorderColumn {
+  width: 4px;
+  padding: 0px;
+  cursor: ew-resize;
+  background-color: #4d5359;
+  z-index: 3;
+  height: 34px;
+}
+
+.BorderColumnInTable {
+  width: 4px;
+  padding: 0px;
+}
+
+.scrollable-menu {
+    height: auto;
+    width: auto;
+    max-height: 500px;
+    max-width: 700px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    
+}
