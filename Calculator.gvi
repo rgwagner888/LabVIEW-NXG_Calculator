@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="A60B091470C4B57D4BBFACD4835CE703" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="87F0DB7117CA5913D28B3F73F169013A" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
@@ -9,7 +9,7 @@
 		<ApplicationVersionInfo Build="4.9.1.56780" Name="LabVIEW NXG" Version="1.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
-		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">This VI is a fully-functional calculator built in LabVIEW.  It demonstrates the following concepts taught in the LabVIEW Basics class.&lt;br/&gt;&lt;br/&gt;- Dataflow Programming&lt;br/&gt;- Modular Programming&lt;br/&gt;- While Loops&lt;br/&gt;- Shift Registers&lt;br/&gt;- Case Structures&lt;br/&gt;- Functional Global Variables&lt;br/&gt;- Event-Driven Programming&lt;br/&gt;- VI Documentation&lt;br/&gt;- Control/Indicator Documentation&lt;br/&gt;- Custom Controls/Type Definitions&lt;br/&gt;- LabVIEW Project and Application Builder&lt;br/&gt;&lt;br/&gt;Author: Erik Johnson, National Instruments</p.UserDescription>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;9-27-2017 Converted to LabVIEW NXG&amp;nbsp;&lt;/p&gt;\n\n&lt;p&gt;Rick Wagner&lt;br /&gt;\nDigalog Systems Inc.&lt;/p&gt;\n\n&lt;p&gt;This VI is a fully-functional calculator built in LabVIEW. It demonstrates the following concepts taught in the LabVIEW Basics class.&lt;/p&gt;\n\n&lt;p&gt;&lt;br /&gt;\n- Dataflow Programming&lt;br /&gt;\n- Modular Programming&lt;br /&gt;\n- While Loops&lt;br /&gt;\n- Shift Registers&lt;br /&gt;\n- Case Structures&lt;br /&gt;\n- Functional Global Variables&lt;br /&gt;\n- Event-Driven Programming&lt;br /&gt;\n- VI Documentation&lt;br /&gt;\n- Control/Indicator Documentation&lt;br /&gt;\n- Custom Controls/Type Definitions&lt;br /&gt;\n- LabVIEW Project and Application Builder&lt;br /&gt;\n&lt;br /&gt;\nAuthor: Erik Johnson, National Instruments&lt;/p&gt;"</p.UserDescription>
 		<Icon Id="43" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="45" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="46" Left="[float]0" TemplateName="GrayNoText" Top="[float]0" Width="[float]40">
@@ -92,7 +92,7 @@
 				</NodeLabel>
 				<EventStructure Bounds="168 15 767 516" Id="157" Selected="160" UserSelectorBounds="20 0 727 17">
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="158">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="50" SourceName="One" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="50" SourceName="One" />
 						<EventStructure.EventData Bounds="0 90 62 35" HasErrorTerminals="False" Id="159" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Old Value,New Value">
 							<EventPropertyItemTerminal DataType="UInt32" Hotspot="62 15" Id="c0t0v" Path="Time" Usage="Optional" />
 						</EventStructure.EventData>
@@ -224,7 +224,7 @@
 						<Wire Id="1560" Joints="N(1558:158)|(3,305) N(1110:158)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="857">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="1054" SourceName="Two" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="1054" SourceName="Two" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="858" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -357,7 +357,7 @@
 						<Wire Id="1561" Joints="N(1558:857)|(3,305) N(1110:857)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2063">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="54" SourceName="Three" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="54" SourceName="Three" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2064" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -490,7 +490,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2125">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="56" SourceName="Four" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="56" SourceName="Four" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2126" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -623,7 +623,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2187">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="58" SourceName="Five" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="58" SourceName="Five" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2188" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -756,7 +756,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2249">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="60" SourceName="Six" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="60" SourceName="Six" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2250" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -889,7 +889,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2311">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="62" SourceName="Seven" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="62" SourceName="Seven" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2312" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -1022,7 +1022,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2373">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="64" SourceName="Eight" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="64" SourceName="Eight" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2374" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -1155,7 +1155,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2435">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="66" SourceName="Nine" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="66" SourceName="Nine" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2436" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -1288,7 +1288,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2497">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="68" SourceName="Zero" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="68" SourceName="Zero" />
 						<EventStructure.EventData Bounds="0 90 92 50" HasErrorTerminals="False" Id="2498" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -1421,14 +1421,14 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="160">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="70" SourceName="Add" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="70" SourceName="Add" />
 						<EventStructure.EventData Bounds="0 85 62 35" HasErrorTerminals="False" Id="161" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Old Value,New Value">
 							<EventPropertyItemTerminal DataType="UInt32" Hotspot="62 15" Id="c0t0v" Path="Time" Usage="Optional" />
 						</EventStructure.EventData>
-						<DataAccessor Bounds="105 135 40 15" DataItem="24" Id="236" Label="237" xmlns="http://www.ni.com/MocCommon">
+						<DataAccessor Bounds="140 140 40 15" DataItem="24" Id="236" Label="237" xmlns="http://www.ni.com/MocCommon">
 							<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 						</DataAccessor>
-						<NodeLabel AttachedTo="236" Bounds="78 135 22 14" Id="237" xmlns="http://www.ni.com/PlatformFramework">
+						<NodeLabel AttachedTo="236" Bounds="113 140 22 14" Id="237" xmlns="http://www.ni.com/PlatformFramework">
 							<p.Text>Add</p.Text>
 						</NodeLabel>
 						<Literal Bounds="497 435 25 15" DataType="Boolean" Facade="False Constant" Id="248" Label="249" xmlns="http://www.ni.com/MocCommon">
@@ -1554,7 +1554,7 @@
 						<Wire Id="1758" Joints="N(1755:Out)|(660,325) N(182:160)|(724,325)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1759">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="72" SourceName="Subtract" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="72" SourceName="Subtract" />
 						<EventStructure.EventData Bounds="0 85 92 50" HasErrorTerminals="False" Id="1760" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -1688,7 +1688,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1835">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="74" SourceName="Multiply" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="74" SourceName="Multiply" />
 						<EventStructure.EventData Bounds="0 85 92 50" HasErrorTerminals="False" Id="1836" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -1822,7 +1822,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1911">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="76" SourceName="Divide" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="76" SourceName="Divide" />
 						<EventStructure.EventData Bounds="0 85 92 50" HasErrorTerminals="False" Id="1912" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -1956,7 +1956,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1987">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="78" SourceName="Equals" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="78" SourceName="Equals" />
 						<EventStructure.EventData Bounds="0 85 92 50" HasErrorTerminals="False" Id="1988" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2090,7 +2090,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="162">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="87" SourceName="Backspace" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="87" SourceName="Backspace" />
 						<EventStructure.EventData Bounds="0 95 62 35" HasErrorTerminals="False" Id="163" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Old Value,New Value">
 							<EventPropertyItemTerminal DataType="UInt32" Hotspot="62 15" Id="c0t0v" Path="Time" Usage="Optional" />
 						</EventStructure.EventData>
@@ -2172,7 +2172,7 @@
 						<Wire Id="1563" Joints="N(1558:162)|(3,305) N(1110:162)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="164">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="83" SourceName="Clear Entry" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="83" SourceName="Clear Entry" />
 						<EventStructure.EventData Bounds="0 95 62 35" HasErrorTerminals="False" Id="165" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Old Value,New Value">
 							<EventPropertyItemTerminal DataType="UInt32" Hotspot="62 15" Id="c0t0v" Path="Time" Usage="Optional" />
 						</EventStructure.EventData>
@@ -2216,7 +2216,7 @@
 						<Wire Id="1559" Joints="N(1558:164)|(3,305) N(1110:164)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1058">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="85" SourceName="Clear All" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="85" SourceName="Clear All" />
 						<EventStructure.EventData Bounds="0 95 92 50" HasErrorTerminals="False" Id="1059" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2313,7 +2313,7 @@
 						<Wire Id="1113" Joints="N(1105:R3)|(245,415) N(189:1058)|(724,415)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="166">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="99" SourceName="Negate" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="99" SourceName="Negate" />
 						<EventStructure.EventData Bounds="0 85 62 35" HasErrorTerminals="False" Id="167" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Old Value,New Value">
 							<EventPropertyItemTerminal DataType="UInt32" Hotspot="62 15" Id="c0t0v" Path="Time" Usage="Optional" />
 						</EventStructure.EventData>
@@ -2345,7 +2345,7 @@
 						<Wire Id="1749" Joints="N(350:-x)|(355,265) N(176:166)|(724,265)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1571">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="101" SourceName="Square Root" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="101" SourceName="Square Root" />
 						<EventStructure.EventData Bounds="0 85 92 50" HasErrorTerminals="False" Id="1572" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2378,7 +2378,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1624">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="103" SourceName="Squared" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="103" SourceName="Squared" />
 						<EventStructure.EventData Bounds="0 85 92 50" HasErrorTerminals="False" Id="1625" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2411,7 +2411,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1677">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="105" SourceName="Inverse" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="105" SourceName="Inverse" />
 						<EventStructure.EventData Bounds="0 85 92 50" HasErrorTerminals="False" Id="1678" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2444,7 +2444,7 @@
 						</NodeLabel>
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="168">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="107" SourceName="Decimal" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="107" SourceName="Decimal" />
 						<EventStructure.EventData Bounds="0 65 92 65" HasErrorTerminals="False" Id="169" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2515,7 +2515,7 @@
 						<Wire Id="1565" Joints="N(1558:168)|(3,305) N(1110:168)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="170">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="1350" SourceName="Memory Clear" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="1350" SourceName="Memory Clear" />
 						<EventStructure.EventData Bounds="0 195 92 50" HasErrorTerminals="False" Id="171" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2600,7 +2600,7 @@
 						<Wire Id="1551" Joints="N(406:R2)|(370,275) h(349) v(30) N(1110:170)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1114">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="111" SourceName="Memory Recall" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="111" SourceName="Memory Recall" />
 						<EventStructure.EventData Bounds="0 195 92 50" HasErrorTerminals="False" Id="1115" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2677,7 +2677,7 @@
 						<Wire Id="1550" Joints="N(1142:R2)|(360,275) h(359) v(30) N(1110:1114)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1178">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="113" SourceName="Memory Store" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="113" SourceName="Memory Store" />
 						<EventStructure.EventData Bounds="0 170 92 50" HasErrorTerminals="False" Id="1179" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2762,7 +2762,7 @@
 						<Wire Id="1549" Joints="N(1206:R2)|(360,275) h(359) v(30) N(1110:1178)|(724,305)" xmlns="http://www.ni.com/PlatformFramework" />
 					</EventStructure.EventCase>
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="1242">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e9ef6ba33aeb4a298dc2b96eccd1ea72" SourceContent="115" SourceName="Memory Add" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@ced1d505412b4d90a0bf27e7fe72ee61" SourceContent="115" SourceName="Memory Add" />
 						<EventStructure.EventData Bounds="0 165 92 50" HasErrorTerminals="False" Id="1243" InstanceDataType="@bdfad51fa57d4715909595b40f0a2082" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2865,7 +2865,7 @@
 					<EventStructure.Tunnel Bounds="744 310 25 10" Docking="Right" Id="1110" Terminals="157=1111, 158=1560, 857=1561, 2063=2121, 2125=2181, 2187=2243, 2249=2305, 2311=2367, 2373=2429, 2435=2491, 2497=2553, 160=1562, 1759=1829, 1835=1903, 1911=1979, 1987=2055, 162=1563, 164=1559, 1058=1109, 166=1564, 1571=1611, 1624=1664, 1677=1717, 168=1565, 170=1551, 1114=1550, 1178=1549, 1242=1548, 2566=2571" />
 					<EventStructure.Tunnel Bounds="-2 310 25 10" Docking="Left" Id="1558" Terminals="157=1557, 158=1560, 857=1561, 2063=2121, 2125=2181, 2187=2243, 2249=2305, 2311=2367, 2373=2429, 2435=2491, 2497=2553, 160=1562, 1759=1829, 1835=1903, 1911=1979, 1987=2055, 162=1563, 164=1559, 1058, 166=1564, 1571=1611, 1624=1664, 1677=1717, 168=1565, 170, 1114, 1178, 1242, 2566=2571" />
 					<EventStructure.EventCase Bounds="20 10 725 500" Id="2566">
-						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@f046f8ed4c814c9aa1af400ce920c4af" SourceContent="2563" SourceName="Switch" />
+						<EventStructure.AttachedEvent EventId="{F3226E31-E688-4C58-AE1E-7ED6718409A1}" EventIndex="2" EventName="Value changed" EventSourceType="Content" EventType="@e3b1b562c1e9475297901f54087cee0d" SourceContent="2563" SourceName="Switch" />
 						<EventStructure.EventData Bounds="0 70 92 50" HasErrorTerminals="False" Id="2567" InstanceDataType="@86ebf06b14ec4901b9278aa87ea1f1cd" Mode="InstanceProperties" PropertyPathsInSemanticOrder="Time,Old Value,New Value">
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 15" Id="c0t0v" Path="Old Value" Usage="Optional" />
 							<EventPropertyItemTerminal DataType="Boolean" Hotspot="92 30" Id="c1t0v" Path="New Value" Usage="Optional" />
@@ -2955,7 +2955,7 @@
 						<Parameter Id="R3" Desc="description" />
 					</MethodDeclaration>
 				</p.MethodDeclaration>
-				<Terminal DataType="@da22f3303676477f9d0090f9605eff97" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@30f1d6a6d6b2440f8b72c5ecda0172f0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="Error" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="Int32" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
@@ -3243,7 +3243,7 @@
 		<p.TypeReference TypeId="571e4e1a4f334394a9ff93934732196a">
 			<Typedef TypedefName="Operation Buttons.gtype" UnderlyingType="@3363d980ef114ac39447cf966ef2f824" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="e9ef6ba33aeb4a298dc2b96eccd1ea72">
+		<p.TypeReference TypeId="ced1d505412b4d90a0bf27e7fe72ee61">
 			<Attributed AttributedType="@1208ea26adc441d689cf2d7e027e8238">
 				<AttributeValues>
 					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
@@ -3266,7 +3266,7 @@
 		<p.TypeReference TypeId="dfdf83f2bf184295ac6b40339caa4318">
 			<Typedef TypedefName="Memory Options.gtype" UnderlyingType="@ed84724b33fe49afa0f150de7d96e892" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="f046f8ed4c814c9aa1af400ce920c4af">
+		<p.TypeReference TypeId="e3b1b562c1e9475297901f54087cee0d">
 			<Attributed AttributedType="@e68eed2b151149eda6947e96cf3bffba">
 				<AttributeValues>
 					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
@@ -3286,7 +3286,7 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="da22f3303676477f9d0090f9605eff97">
+		<p.TypeReference TypeId="30f1d6a6d6b2440f8b72c5ecda0172f0">
 			<Attributed AttributedType="@5a0b83b50bd842469a8f9ec749b3a30f">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI:G\ Core:Error" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="140EA6820A01C5F0F2D4D0EACC1CCB03" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="2DB21E8314080D5845E64C805D44235A" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="C" Name="http://www.ni.com/CCode" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
@@ -11,7 +11,7 @@
 		<ApplicationVersionInfo Build="4.9.1.56780" Name="LabVIEW NXG" Version="1.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
-		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">This VI applies a decimal and increments the decimal count if we are in decimal mode (decimal count &gt; 0).&lt;br/&gt;&lt;br/&gt;Author: Erik Johnson, National Instruments</p.UserDescription>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;9-27-2017 Converted to LabVIEW NXG&lt;/p&gt;\n\n&lt;p style="margin-bottom: 10px;"&gt;Rick Wagner&lt;br /&gt;\nDigalog Systems Inc.&lt;/p&gt;\n\n&lt;p&gt;This VI applies a decimal and increments the decimal count if we are in decimal mode (decimal count &amp;gt; 0).&lt;br /&gt;\n&lt;br /&gt;\nAuthor: Erik Johnson, National Instruments&lt;/p&gt;"</p.UserDescription>
 		<Icon Id="21" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="23" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="24" Left="[float]0" TemplateName="GrayNoText" Top="[float]0" Width="[float]40">
@@ -90,11 +90,11 @@
 						<p.Text>Display In</p.Text>
 					</NodeLabel>
 					<IsGreaterThan0 Bounds="260 295 30 30" Id="86" />
-					<CCodeNode Bounds="185 65 210 105" DocumentText="&quot;// Code in a Formula Node was converted to code in a C Node.\r\n// Review the converted code to ensure it has the same behavior\r\n// as the original code.\r\n\r\n\r\n// ORIGINAL CODE:\r\n\r\n// y=x/10**n;\r\n\r\n\r\n// CONVERTED CODE:\r\n\r\n// Warnings:\r\n//   #1: The operator '**' is not supported in the C Node. Please manually replace all instances with the pow(x,y) C function.\r\ndouble z;\r\nz=pow(10,n);\r\ny=x/z;&quot;" Id="87" OutliningMode="Automatic" xmlns="http://www.ni.com/CCode">
+					<CCodeNode Bounds="185 65 210 105" DocumentText="&quot;// Code in a Formula Node was converted to code in a C Node.\r\n// Review the converted code to ensure it has the same behavior\r\n// as the original code.\r\n\r\n\r\n// ORIGINAL CODE:\r\n\r\n// y=x/10**n;\r\n\r\n\r\n// CONVERTED CODE:\r\n\r\n// Warnings:\r\n//   #1: The operator '**' is not supported in the C Node. Please manually replace all instances with the pow(x,y) C function.\r\ndouble z;\r\nz=pow(10,n);\r\ny=x/z;&quot;" Id="87" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
 						<CCodeNodeDll DllId="{44fcd908-1cd3-4e14-b09e-b656dfa71e33}" Id="88" />
-						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="x" Usage="Required" />
-						<CVariable Bounds="-25 55 45 15" DataType="UInt8" Direction="Input" Hotspot="-25 60" Id="2" Name="n" Usage="Required" />
-						<CVariable Bounds="190 40 50 15" DataType="Double" Direction="Output" Hotspot="240 45" Id="3" IsTypeFixed="True" Name="y" Usage="Optional" />
+						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Facade="" Hotspot="-25 45" Id="1" Name="x" Usage="Required" />
+						<CVariable Bounds="-25 55 45 15" DataType="UInt8" Direction="Input" Facade="" Hotspot="-25 60" Id="2" Name="n" Usage="Required" />
+						<CVariable Bounds="190 40 50 15" DataType="Double" Direction="Output" Facade="" Hotspot="240 45" Id="3" IsTypeFixed="True" Name="y" Usage="Optional" />
 					</CCodeNode>
 					<MethodCall Bounds="405 50 40 40" DomainName="NI:G Core:Error" Id="89" ResolveFailedHint="" Target="NI:G\ Core:Error:Clear\ Errors\.gvi" Template="Icon" xmlns="http://www.ni.com/MocCommon">
 						<p.MethodDeclaration>

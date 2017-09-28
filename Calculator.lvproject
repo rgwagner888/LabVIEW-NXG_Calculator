@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="97AE9517B4D11770FC041655C518A7F1" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="B381C0859FEBE7BBB1BA228F647AC2EC" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
@@ -25,25 +25,25 @@
 						<Instance Id="11" Source="{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop">
 							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop" p9:Process.DiscoveryAddress="localhost:SystemController" p9:Process.DiscoveryUserAlias="RICK-PC2" p9:Process.FirmwareVersion="68IRR Ver. F.64" p9:Process.HardwareAlias="RICK-PC2" p9:Process.HardwareRevision="A1019D1103" p9:Process.IsSimulated="False" p9:Process.OperatingSystemDescription="Microsoft Windows 10 Pro" p9:Process.SerialNumber="2CE2451DQC" p9:Process.SupportsExternalCalibration="False" p9:Process.SystemUserComment="" p9:Process.VendorName="Hewlett-Packard" p10:Process.LinkedWhenMatched="True" p10:Process.ModelName="HP ProBook 4540s" xmlns:p10="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost" p9:Process.AssociatedIdentifier="55" xmlns:p9="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p8="http://www.ni.com/Core/Proxy" />
-							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost/[{http://www.ni.com/SystemDesigner/Common/SystemModel}EthernetConnector]EthernetConnector/[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth12" p9:Process.HardwareAlias="Bluetooth Device (Personal Area Network)" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost/[{http://www.ni.com/SystemDesigner/Common/SystemModel}EthernetConnector]EthernetConnector/[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth10" p9:Process.HardwareAlias="Bluetooth Device (Personal Area Network)" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="31" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
-							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth18" p9:Process.HardwareAlias="Fortinet SSL VPN Virtual Ethernet Adapter" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth17" p9:Process.HardwareAlias="Fortinet SSL VPN Virtual Ethernet Adapter" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="35" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
-							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth15" p9:Process.HardwareAlias="VMware Virtual Ethernet Adapter for VMnet1" p9:Process.NetworkConfig.Ipv4Address="192.168.131.1" p9:Process.NetworkConfig.Ipv4SubnetMask="255.255.255.0" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth14" p9:Process.HardwareAlias="VMware Virtual Ethernet Adapter for VMnet1" p9:Process.NetworkConfig.Ipv4Address="192.168.131.1" p9:Process.NetworkConfig.Ipv4SubnetMask="255.255.255.0" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="39" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
 							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth4" p9:Process.HardwareAlias="VMware Virtual Ethernet Adapter for VMnet8" p9:Process.NetworkConfig.Ipv4Address="192.168.88.1" p9:Process.NetworkConfig.Ipv4SubnetMask="255.255.255.0" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="43" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
-							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth5" p9:Process.HardwareAlias="Fortinet Virtual Ethernet Adapter (NDIS 6.30)" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth3" p9:Process.HardwareAlias="Fortinet Virtual Ethernet Adapter (NDIS 6.30)" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="47" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
-							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth8" p9:Process.HardwareAlias="Realtek PCIe GBE Family Controller" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth7" p9:Process.HardwareAlias="Realtek PCIe GBE Family Controller" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="51" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
-							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:wlan9" p9:Process.HardwareAlias="Qualcomm Atheros AR9485 802.11b|g|n WiFi Adapter" p9:Process.NetworkConfig.Ipv4Address="192.168.10.132" p9:Process.NetworkConfig.Ipv4DnsServer="192.168.10.1" p9:Process.NetworkConfig.Ipv4Gateway="192.168.10.1" p9:Process.NetworkConfig.Ipv4SubnetMask="255.255.255.0" p9:Process.NetworkConfig.NetworkAdapterMode="32" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:wlan5" p9:Process.HardwareAlias="Qualcomm Atheros AR9485 802.11b|g|n WiFi Adapter" p9:Process.NetworkConfig.Ipv4Address="192.168.10.132" p9:Process.NetworkConfig.Ipv4DnsServer="192.168.10.1" p9:Process.NetworkConfig.Ipv4Gateway="192.168.10.1" p9:Process.NetworkConfig.Ipv4SubnetMask="255.255.255.0" p9:Process.NetworkConfig.NetworkAdapterMode="32" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="100" Source="{http://www.ni.com/SystemDesigner/Vi}Process.Vi">
 							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Vi}Process.Vi]Process.Vi" p9:Process.AliasName="Overflow Protection.gvi" p9:Process.AssociatedIdentifier="98" p9:Process.Visible="True" xmlns:p9="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p8="http://www.ni.com/Core/Proxy" />
@@ -222,6 +222,7 @@
 						<WeakDefaultComponentConfigurationReference Id="392" Target="ModInst\.gcomp" />
 						<WeakDefaultComponentConfigurationReference Id="394" Target="VISA\.gcomp" />
 						<WeakDefaultComponentConfigurationReference Id="396" Target="TClk\.gcomp" />
+						<WeakDefaultComponentConfigurationReference Id="454" Target="agit3446xseries\.gcomp" />
 					</BuildSpecificationDefinition>
 					<EmbeddedDefinitionReference Bindings="ComponentMoC,Envoy,DefinitionReference,SparseEnvoyManager,EmbeddedReference,ComponentBaseType_Library,{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library" Id="71" ModelDefinitionType="SparseEnvoyManager" Name="Default\ Component" Reparentable="False">
 						<SparseEnvoyManager Id="72">
@@ -284,6 +285,7 @@
 						<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="292" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-TClk\-TClk\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/TClk/TClk-src/17.0.0" />
 						<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="294" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-VISA\-Base\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/VISA/Base-src/17.0.0" />
 						<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="296" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-XNET\-xnet\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/XNET/xnet-src/17.0.0" />
+						<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="452" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-InstrumentDriver\-agilent3446xseries\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/InstrumentDriver/agilent3446xseries-src/17.0.0" />
 					</EmbeddedDefinitionReference>
 				</NameScopingEnvoy>
 				<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,RepositoryManagerDefinition,EmbeddedReference" Id="86" ModelDefinitionType="RepositoryManagerDefinition" Name="vi\.lib\.Common" Reparentable="False">
@@ -363,6 +365,7 @@
 					<PackageInterfaceDefinitionContents ComponentDefinitionNames="ModInst.gcomp" Id="393" PackageInterfaceDefinitionEnvoyId="283" />
 					<PackageInterfaceDefinitionContents ComponentDefinitionNames="VISA.gcomp" Id="395" PackageInterfaceDefinitionEnvoyId="295" />
 					<PackageInterfaceDefinitionContents ComponentDefinitionNames="TClk.gcomp" Id="397" PackageInterfaceDefinitionEnvoyId="293" />
+					<PackageInterfaceDefinitionContents ComponentDefinitionNames="agit3446xseries.gcomp" Id="455" PackageInterfaceDefinitionEnvoyId="453" />
 				</PackageReferencesDefinition>
 				<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="149" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-G\-stdlib\-src\-1\.0\.2\.25\.niaddon" StoragePath="ref://NI/G/stdlib-src/1.0.2.25" />
 				<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="241" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-analysis\-advanced\-src\-1\.0\.3\.11\.niaddon" StoragePath="ref://NI/analysis/advanced-src/1.0.3.11" />
@@ -394,6 +397,7 @@
 				<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="293" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-TClk\-TClk\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/TClk/TClk-src/17.0.0" />
 				<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="295" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-VISA\-Base\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/VISA/Base-src/17.0.0" />
 				<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="297" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-XNET\-xnet\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/XNET/xnet-src/17.0.0" />
+				<SourceFileReference Bindings="EnvoyManager,Envoy,DefinitionReference,PackageInterfaceDefinition,FileReference,SourceFileReference" Id="453" ModelDefinitionType="PackageInterfaceDefinition" Name="NI\-InstrumentDriver\-agilent3446xseries\-src\-17\.0\.0\.niaddon" StoragePath="ref://NI/InstrumentDriver/agilent3446xseries-src/17.0.0" />
 			</EmbeddedDefinitionReference>
 			<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType,ProjectItemDragDropDefaultService,EmbeddedReference,UserNonVisible" Id="178" ModelDefinitionType="NationalInstruments.ProjectExplorer.ExternalFileSupport.Modeling.ExternalFileType" Name="results\.jsonp">
 				<ExternalFile>

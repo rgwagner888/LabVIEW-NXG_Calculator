@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="CAEA5B17B1D2508831B813888075E2E0" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="07D57DC962146954A259C72575CF7595" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="C" Name="http://www.ni.com/CCode" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
@@ -11,7 +11,7 @@
 		<ApplicationVersionInfo Build="4.9.1.56780" Name="LabVIEW NXG" Version="1.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
-		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">This VI handles the backspacing of a decimal number.  The way it works is as follows:&lt;br/&gt;&lt;br/&gt;The display is multiplied by 10 raised to however many decimals it has to make it a whole number (ex: 12.34 * 10^2 = 1234).&lt;br/&gt;Next, we Mod 10 the display (ex: 1234 = 123).&lt;br/&gt;Finally, we divide the display by the 10 raised to the number of decimals it had minus one (ex: 123 / 10^1 = 12.3)&lt;br/&gt;&lt;br/&gt;Author: Erik Johnson, National Instruments</p.UserDescription>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;9-27-2017 Converted to LabVIEW NXG&lt;/p&gt;\n\n&lt;p style="margin-bottom: 10px;"&gt;Rick Wagner&lt;br /&gt;\nDigalog Systems Inc.&lt;/p&gt;\n\n&lt;p&gt;This VI handles the backspacing of a decimal number. The way it works is as follows:&lt;br /&gt;\n&lt;br /&gt;\nThe display is multiplied by 10 raised to however many decimals it has to make it a whole number (ex: 12.34 * 10^2 = 1234).&lt;br /&gt;\nNext, we Mod 10 the display (ex: 1234 = 123).&lt;br /&gt;\nFinally, we divide the display by the 10 raised to the number of decimals it had minus one (ex: 123 / 10^1 = 12.3)&lt;br /&gt;\n&lt;br /&gt;\nAuthor: Erik Johnson, National Instruments&lt;/p&gt;"</p.UserDescription>
 		<Icon Id="20" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="22" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="23" Left="[float]0" TemplateName="GrayNoText" Top="[float]0" Width="[float]40">
@@ -122,10 +122,10 @@
 							<NodeLabel AttachedTo="100" Bounds="325 204 9 18" Id="101" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 								<p.Text>y</p.Text>
 							</NodeLabel>
-							<CCodeNode Bounds="25 65 200 100" DocumentText="&quot;// Code in a Formula Node was converted to code in a C Node.\r\n// Review the converted code to ensure it has the same behavior\r\n// as the original code.\r\n\r\n\r\n// ORIGINAL CODE:\r\n\r\n// y=10**(n-1);\r\n\r\n\r\n// CONVERTED CODE:\r\n\r\n// Warnings:\r\n//   #2: The operator '**' is not supported in the C Node. Please manually replace all instances with the pow(x,y) C function.\r\nn=n-1;\r\ny=pow(10,n);&quot;" Id="102" OutliningMode="Automatic" xmlns="http://www.ni.com/CCode">
+							<CCodeNode Bounds="25 65 200 100" DocumentText="&quot;// Code in a Formula Node was converted to code in a C Node.\r\n// Review the converted code to ensure it has the same behavior\r\n// as the original code.\r\n\r\n\r\n// ORIGINAL CODE:\r\n\r\n// y=10**(n-1);\r\n\r\n\r\n// CONVERTED CODE:\r\n\r\n// Warnings:\r\n//   #2: The operator '**' is not supported in the C Node. Please manually replace all instances with the pow(x,y) C function.\r\nn=n-1;\r\ny=pow(10,n);&quot;" Id="102" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
 								<CCodeNodeDll DllId="{563064e8-588e-400a-9e51-e0956a0deb6a}" Id="103" />
-								<CVariable Bounds="-25 40 45 15" DataType="UInt8" Direction="Input" Hotspot="-25 45" Id="1" Name="n" Usage="Required" />
-								<CVariable Bounds="180 40 50 15" DataType="Double" Direction="Output" Hotspot="230 45" Id="2" IsTypeFixed="True" Name="y" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="UInt8" Direction="Input" Facade="" Hotspot="-25 45" Id="1" Name="n" Usage="Required" />
+								<CVariable Bounds="180 40 50 15" DataType="Double" Direction="Output" Facade="" Hotspot="230 45" Id="2" IsTypeFixed="True" Name="y" Usage="Optional" />
 							</CCodeNode>
 							<MethodCall Bounds="245 50 40 40" DomainName="NI:G Core:Error" Id="104" ResolveFailedHint="" Target="NI:G\ Core:Error:Clear\ Errors\.gvi" Template="Icon" xmlns="http://www.ni.com/MocCommon">
 								<p.MethodDeclaration>
@@ -145,10 +145,10 @@
 							<Multiply Bounds="305 190 30 30" Id="106" Terminals="o=134, c0t0v=133, c1t0v=132" />
 							<QuotientAndRemainder Bounds="375 200 30 30" Id="107" />
 							<Decrement Bounds="310 100 30 30" Id="108" />
-							<CCodeNode Bounds="395 65 200 100" DocumentText="&quot;// Code in a Formula Node was converted to code in a C Node.\r\n// Review the converted code to ensure it has the same behavior\r\n// as the original code.\r\n\r\n\r\n// ORIGINAL CODE:\r\n\r\n// y=10**(n-1);\r\n\r\n\r\n// CONVERTED CODE:\r\n\r\n// Warnings:\r\n//   #3: The operator '**' is not supported in the C Node. Please manually replace all instances with the pow(x,y) C function.\r\nn=n-1;\r\ny=pow(10,n);&quot;" Id="109" OutliningMode="Automatic" xmlns="http://www.ni.com/CCode">
+							<CCodeNode Bounds="395 65 200 100" DocumentText="&quot;// Code in a Formula Node was converted to code in a C Node.\r\n// Review the converted code to ensure it has the same behavior\r\n// as the original code.\r\n\r\n\r\n// ORIGINAL CODE:\r\n\r\n// y=10**(n-1);\r\n\r\n\r\n// CONVERTED CODE:\r\n\r\n// Warnings:\r\n//   #3: The operator '**' is not supported in the C Node. Please manually replace all instances with the pow(x,y) C function.\r\nn=n-1;\r\ny=pow(10,n);&quot;" Id="109" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
 								<CCodeNodeDll DllId="{900486f3-6176-47a8-bf90-71dd46ce93a4}" Id="110" />
-								<CVariable Bounds="-25 40 45 15" DataType="UInt8" Direction="Input" Hotspot="-25 45" Id="1" Name="n" Usage="Required" />
-								<CVariable Bounds="180 40 50 15" DataType="Double" Direction="Output" Hotspot="230 45" Id="2" IsTypeFixed="True" Name="y" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="UInt8" Direction="Input" Facade="" Hotspot="-25 45" Id="1" Name="n" Usage="Required" />
+								<CVariable Bounds="180 40 50 15" DataType="Double" Direction="Output" Facade="" Hotspot="230 45" Id="2" IsTypeFixed="True" Name="y" Usage="Optional" />
 							</CCodeNode>
 							<MethodCall Bounds="615 50 40 40" DomainName="NI:G Core:Error" Id="111" ResolveFailedHint="" Target="NI:G\ Core:Error:Clear\ Errors\.gvi" Template="Icon" xmlns="http://www.ni.com/MocCommon">
 								<p.MethodDeclaration>

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="5AC9811EC83C255877CF145E79AE52BB" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="E54FCC63E30421767BDBC53BF08AC027" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="4.8.0.0" Version="4.8.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
-		<ApplicationVersionInfo Build="4.9.1.56780" Name="LabVIEW Conversion" Version="4.9.1.56780" />
+		<ApplicationVersionInfo Build="4.9.1.56780" Name="LabVIEW NXG" Version="1.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
-		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">This VI protects the Calculator against overflow, it will not allow numbers greater than 1E+15.&lt;br/&gt;&lt;br/&gt;Author: Erik Johnson, National Instruments</p.UserDescription>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;9-27-2017 Converted to LabVIEW NXG&lt;/p&gt;\n\n&lt;p style="margin-bottom: 10px;"&gt;Rick Wagner&lt;br /&gt;\nDigalog Systems Inc.&lt;/p&gt;\n\n&lt;p&gt;This VI protects the Calculator against overflow, it will not allow numbers greater than 1E+15.&lt;br /&gt;\n&lt;br /&gt;\nAuthor: Erik Johnson, National Instruments&lt;/p&gt;"</p.UserDescription>
 		<Icon Id="19" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="21" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="22" Left="[float]0" TemplateName="GrayNoText" Top="[float]0" Width="[float]40">
@@ -183,11 +183,11 @@
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]2000">
 			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="26" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" IsTabStop="[bool]True" Label="[UIModel]28" Left="[float]110" Maximum="[double]Infinity" MinHeight="[float]24" Minimum="[double]-Infinity" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]0" Top="[float]30" Value="{DataItemBinding Id=14}" ValueFormatter="[string]LV:G0" Width="[float]65" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-			<Label Id="28" LabelOwner="[UIModel]26" Left="[float]110" Text="[string]Display Before" Top="[float]10" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="28" LabelOwner="[UIModel]26" Left="[float]110" Text="[string]Display Before" Top="[float]10" Width="[float]76" xmlns="http://www.ni.com/PanelCommon" />
 			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="29" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" IsTabStop="[bool]True" Label="[UIModel]31" Left="[float]110" Maximum="[double]Infinity" MinHeight="[float]24" Minimum="[double]-Infinity" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]1" Top="[float]90" Value="{DataItemBinding Id=15}" ValueFormatter="[string]LV:G0" Width="[float]65" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-			<Label Id="31" LabelOwner="[UIModel]29" Left="[float]110" Text="[string]Display After" Top="[float]70" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="31" LabelOwner="[UIModel]29" Left="[float]110" Text="[string]Display After" Top="[float]70" Width="[float]68" xmlns="http://www.ni.com/PanelCommon" />
 			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="32" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" IsTabStop="[bool]True" Label="[UIModel]34" Left="[float]312" Maximum="[double]Infinity" MinHeight="[float]24" Minimum="[double]-Infinity" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]2" Top="[float]32" Value="{DataItemBinding Id=16}" ValueFormatter="[string]LV:G0" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-			<Label Id="34" LabelOwner="[UIModel]32" Left="[float]312" Text="[string]Display Output" Top="[float]12" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="34" LabelOwner="[UIModel]32" Left="[float]312" Text="[string]Display Output" Top="[float]12" Width="[float]80" xmlns="http://www.ni.com/PanelCommon" />
 			<Cluster BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="130" IsTabStop="[bool]True" Label="[UIModel]137" Left="[float]100" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]3" Top="[float]155" Value="{DataItemBinding Id=17}" Width="[float]176" p4:ControlDefinitionChecksum="ciOmJMo5OE8XEaXh0ywYDA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="NI:G\ Core:Error:Error\.gtype:ControlDefinition" />
@@ -199,7 +199,7 @@
 				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="135" Label="[UIModel]136" Left="[float]3" MinHeight="[float]24" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 				<p4:Label Height="[float]16" Id="136" LabelOwner="[UIModel]135" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
 			</Cluster>
-			<Label Height="[float]16" Id="137" LabelOwner="[UIModel]130" Left="[float]100" Text="[string]error in (no error)" Top="[float]135" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="137" LabelOwner="[UIModel]130" Left="[float]100" Text="[string]error in (no error)" Top="[float]135" Width="[float]93" xmlns="http://www.ni.com/PanelCommon" />
 			<Cluster BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="139" IsTabStop="[bool]True" Label="[UIModel]146" Left="[float]311" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]4" Top="[float]154" Value="{DataItemBinding Id=18}" Width="[float]176" p4:ControlDefinitionChecksum="ciOmJMo5OE8XEaXh0ywYDA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="NI:G\ Core:Error:Error\.gtype:ControlDefinition" />
@@ -211,7 +211,7 @@
 				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="144" IsReadOnly="[bool]True" Label="[UIModel]145" Left="[float]3" MinHeight="[float]24" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 				<p4:Label Height="[float]16" Id="145" LabelOwner="[UIModel]144" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
 			</Cluster>
-			<Label Height="[float]16" Id="146" LabelOwner="[UIModel]139" Left="[float]311" Text="[string]error out" Top="[float]134" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="146" LabelOwner="[UIModel]139" Left="[float]311" Text="[string]error out" Top="[float]134" Width="[float]47" xmlns="http://www.ni.com/PanelCommon" />
 		</CPFrontPanel>
 		<DataItem CallDirection="Input" CallIndex="1" CallUsage="Required" DataType="Double" Id="14" Name="Display Before" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>0x0</p.DefaultValue>

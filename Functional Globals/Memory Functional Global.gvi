@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="CC0730126C11871F63DDE20EA16DE62A" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="7A04F34D21A5B196A73E1A8039CF1BE9" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.9.1.56780" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
@@ -9,7 +9,7 @@
 		<ApplicationVersionInfo Build="4.9.1.56780" Name="LabVIEW NXG" Version="1.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
-		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">This Functional Global Variable provides storage, access, and modifications to the number stored in the Calculator's memory.&lt;br/&gt;&lt;br/&gt;Author: Erik Johnson, National Instruments</p.UserDescription>
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;9-27-2017 Converted to LabVIEW NXG&lt;/p&gt;\n\n&lt;p&gt;Rick Wagner&lt;br /&gt;\nDigalog Systems Inc.&lt;/p&gt;\n\n&lt;p&gt;This Functional Global Variable provides storage, access, and modifications to the number stored in the Calculator&amp;#39;s memory.&lt;br /&gt;\n&lt;br /&gt;\nAuthor: Erik Johnson, National Instruments&lt;/p&gt;"</p.UserDescription>
 		<Icon Id="20" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="22" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="23" Left="[float]0" TemplateName="GrayNoText" Top="[float]0" Width="[float]40">
@@ -188,7 +188,7 @@
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]2000">
 			<Label Height="[float]16" Id="29" LabelOwner="[UIModel]27" Left="[float]122" Text="[string]Memory Option" Top="[float]10" Width="[float]85" xmlns="http://www.ni.com/PanelCommon" />
-			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Memory Options" Height="[float]41" Id="27" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTabStop="[bool]True" IsTypeAheadEnabled="[bool]True" Label="[UIModel]29" Left="[float]122" MinHeight="[float]24" TabIndex="[int]0" Top="[float]30" Value="{DataItemBinding Id=14}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]107" p4:ControlDefinitionChecksum="/mRwro0drV708CfW9NsVYw==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Memory Options" Height="[float]41" Id="27" IncludeInCapture="[bool]True" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTabStop="[bool]True" IsTypeAheadEnabled="[bool]True" Label="[UIModel]29" Left="[float]122" MinHeight="[float]24" TabIndex="[int]0" Top="[float]30" Value="{DataItemBinding Id=14}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]107" p4:ControlDefinitionChecksum="/mRwro0drV708CfW9NsVYw==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="Memory\ Options\.gtype:ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
@@ -197,11 +197,11 @@
 				<EnumSelectorInfo DisplayValue="[string]Memory Store" Value="[ushort]2" ValueType="[Type]UInt16" />
 				<EnumSelectorInfo DisplayValue="[string]Memory Add" Value="[ushort]3" ValueType="[Type]UInt16" />
 			</EnumSelector>
-			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="30" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[double]1" IsTabStop="[bool]True" Label="[UIModel]32" Left="[float]122" Maximum="[double]Infinity" MinHeight="[float]24" Minimum="[double]-Infinity" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]1" Top="[float]128" Value="{DataItemBinding Id=15}" ValueFormatter="[string]LV:G0" Width="[float]107" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="30" IncludeInCapture="[bool]True" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[double]1" IsTabStop="[bool]True" Label="[UIModel]32" Left="[float]122" Maximum="[double]Infinity" MinHeight="[float]24" Minimum="[double]-Infinity" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]1" Top="[float]128" Value="{DataItemBinding Id=15}" ValueFormatter="[string]LV:G0" Width="[float]107" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 			<Label Height="[float]16" Id="32" LabelOwner="[UIModel]30" Left="[float]122" Text="[string]Number In" Top="[float]108" Width="[float]57" xmlns="http://www.ni.com/PanelCommon" />
-			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="33" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[double]1" IsTabStop="[bool]True" Label="[UIModel]35" Left="[float]390" Maximum="[double]Infinity" MinHeight="[float]24" Minimum="[double]-Infinity" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]2" Top="[float]45" Value="{DataItemBinding Id=16}" ValueFormatter="[string]LV:G0" Width="[float]96" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="33" IncludeInCapture="[bool]True" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[double]1" IsTabStop="[bool]True" Label="[UIModel]35" Left="[float]390" Maximum="[double]Infinity" MinHeight="[float]24" Minimum="[double]-Infinity" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]2" Top="[float]45" Value="{DataItemBinding Id=16}" ValueFormatter="[string]LV:G0" Width="[float]96" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 			<Label Height="[float]16" Id="35" LabelOwner="[UIModel]33" Left="[float]390" Text="[string]Number Out" Top="[float]25" Width="[float]67" xmlns="http://www.ni.com/PanelCommon" />
-			<Cluster BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="154" IsTabStop="[bool]True" Label="[UIModel]161" Left="[float]100" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]3" Top="[float]312" Value="{DataItemBinding Id=18}" Width="[float]176" p4:ControlDefinitionChecksum="ciOmJMo5OE8XEaXh0ywYDA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+			<Cluster BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="154" IncludeInCapture="[bool]True" IsTabStop="[bool]True" Label="[UIModel]161" Left="[float]100" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]3" Top="[float]312" Value="{DataItemBinding Id=18}" Width="[float]176" p4:ControlDefinitionChecksum="ciOmJMo5OE8XEaXh0ywYDA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="NI:G\ Core:Error:Error\.gtype:ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
@@ -213,7 +213,7 @@
 				<p4:Label Height="[float]16" Id="160" LabelOwner="[UIModel]159" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
 			</Cluster>
 			<Label Height="[float]16" Id="161" LabelOwner="[UIModel]154" Left="[float]100" Text="[string]error in (no error)" Top="[float]292" Width="[float]93" xmlns="http://www.ni.com/PanelCommon" />
-			<Cluster BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="163" IsTabStop="[bool]True" Label="[UIModel]170" Left="[float]383" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]4" Top="[float]311" Value="{DataItemBinding Id=19}" Width="[float]176" p4:ControlDefinitionChecksum="ciOmJMo5OE8XEaXh0ywYDA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+			<Cluster BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="163" IncludeInCapture="[bool]True" IsTabStop="[bool]True" Label="[UIModel]170" Left="[float]383" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]4" Top="[float]311" Value="{DataItemBinding Id=19}" Width="[float]176" p4:ControlDefinitionChecksum="ciOmJMo5OE8XEaXh0ywYDA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
 				<p4:p.TypeDefinitionTargets>
 					<p4:TypeDefinitionTarget TargetName="NI:G\ Core:Error:Error\.gtype:ControlDefinition" />
 				</p4:p.TypeDefinitionTargets>
@@ -225,7 +225,7 @@
 				<p4:Label Height="[float]16" Id="169" LabelOwner="[UIModel]168" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
 			</Cluster>
 			<Label Height="[float]16" Id="170" LabelOwner="[UIModel]163" Left="[float]383" Text="[string]error out" Top="[float]291" Width="[float]47" xmlns="http://www.ni.com/PanelCommon" />
-			<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]24" Id="173" IsReadOnly="[bool]True" Label="[UIModel]174" Left="[float]390" MinHeight="[float]24" MinWidth="[float]24" Shape="[LEDShape]Square" TabIndex="[int]5" Top="[float]128" TrueContent="[string]On" Value="{DataItemBinding Id=171}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]24" Id="173" IncludeInCapture="[bool]True" IsReadOnly="[bool]True" Label="[UIModel]174" Left="[float]390" MinHeight="[float]24" MinWidth="[float]24" Shape="[LEDShape]Square" TabIndex="[int]5" Top="[float]128" TrueContent="[string]On" Value="{DataItemBinding Id=171}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 			<Label Height="[float]16" Id="174" LabelOwner="[UIModel]173" Left="[float]390" Text="[string]Memory" Top="[float]108" Width="[float]45" xmlns="http://www.ni.com/PanelCommon" />
 		</CPFrontPanel>
 		<DataItem CallDirection="Input" CallIndex="4" DataType="@dfdf83f2bf184295ac6b40339caa4318" Id="14" Name="Memory Option" xmlns="http://www.ni.com/MocCommon">
